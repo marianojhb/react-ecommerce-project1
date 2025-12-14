@@ -2,18 +2,36 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import IconCart from './IconCart';
 import { Link } from 'react-router-dom';
 
-const Navegacion = ({ menu, links, linkCheckout, cart }) => {
+const Navegacion = ({ cart }) => {
+
+  const links = [
+    {
+      name: 'Acerca de',
+      url: '/about',
+    },
+    {
+      name: 'Contacto',
+      url: '/contact',
+    },
+    {
+      name: 'Productos',
+      url: '/products',
+    },
+  ]
+
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">Sitio de Compras</Navbar.Brand>
+          <Navbar.Brand as={Link} to={'/'}>
+            Sitio de Compras
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {menu.map((nombre, index) => (
-                <Nav.Link key={index} as={Link} to={links[index]}>
-                  {nombre}
+              {links.map((link, index) => (
+                <Nav.Link key={index} as={Link} to={link.url}>
+                  {link.name}
                 </Nav.Link>
               ))}
             </Nav>

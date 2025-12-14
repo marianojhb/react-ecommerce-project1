@@ -9,9 +9,7 @@ import Products from './pages/Products';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const menu = ['Acerca de', 'Contacto', 'Productos'];
-  const links = ['/about', '/contact', '/products'];
-  const linkCheckout = '/checkout';
+
   const listadoDeProductos = [
     {
       id: 1,
@@ -39,7 +37,7 @@ function App() {
     <>
       <Router>
         <div>
-          <Navegacion menu={menu} links={links} linkCheckout={linkCheckout} cart={cart} />
+          <Navegacion cart={cart} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
