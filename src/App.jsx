@@ -36,7 +36,7 @@ function App() {
             return [];
           }),
         // Simulamos una demora de 3 segundos
-        new Promise((resolve) => setTimeout(() => resolve(), 3000)),
+        new Promise((resolve) => setTimeout(() => resolve(), 1000)),
       ]);
 
       if (error) {
