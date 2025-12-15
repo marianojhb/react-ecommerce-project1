@@ -4,7 +4,7 @@ import BotonAgregarProductoCart from './BotonAgregarProductoCart';
 const ProductoCard = ({ producto, cart, setCart }) => {
   return (
     <>
-    <Card className="h-100 shadow-sm">
+    <Card className="card border-light mb-3 h-100 " style={{ maxWidth: '20rem' }}>
       {producto.img && (
         <Card.Img variant="top" src={producto.img} alt={producto.desc} style={{ objectFit: 'cover', height: 160 }} />
       )}

@@ -46,7 +46,7 @@ const BotonAgregarProductoCart = ({ setCart, producto, cart }) => {
     }
   };
 
-  return <button onClick={handleAgregar}>Agregar</button>;
+  return <button onClick={handleAgregar} type="button" class="btn btn-warning">Agregar</button>;
 };
 
 export default BotonAgregarProductoCart;
