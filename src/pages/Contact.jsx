@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap';
 const Contact = () => {
   return (
     <>
-      <Container>
-        <h2>Pagina Contact</h2>
+      <Container className="py-4">
+        <h2 className="mb-3">Pagina Contact</h2>
       </Container>
     </>
   );
