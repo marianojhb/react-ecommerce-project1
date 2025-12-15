@@ -6,6 +6,7 @@ const BotonAgregarProductoCart = ({ setCart, producto, cart }) => {
     const safeProducto = {
       ...producto,
       stock: Number.isFinite(producto.stock) ? producto.stock : Infinity,
+      img: producto.img,
     };
     let showNoStock = false;
 
